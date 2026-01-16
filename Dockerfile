@@ -1,12 +1,11 @@
-# Usamos la imagen PHP CLI
-FROM php:8.2-cli
+# Imagen oficial de PHP con Apache
+FROM php:8.2-apache
 
-# Copiamos todos los archivos al contenedor
-WORKDIR /app
-COPY . /app
+# Copiamos todo el proyecto al directorio de Apache
+COPY . /var/www/html/
 
-# Exponemos el puerto que Railway asigna
-EXPOSE 8080
+# Habilitamos mod_rewrite por si necesitas rutas amigables
+RUN a2enmod rewrite
 
-# Comando para iniciar el servidor PHP
-CMD ["php", "-S", "0.0.0.0:8080", "-t", "."]
+# Exponemos el puerto 80
+EXPOSE 80
