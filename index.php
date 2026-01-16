@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOE Monitor v3.0 - AGX Thor</title>
     <link rel="manifest" href="manifest.json">
+
     <style>
         :root {
             --bg-primary: #0d1117;
