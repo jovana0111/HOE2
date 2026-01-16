@@ -1,0 +1,4 @@
+<IfModule mpm_prefork_module>
+  RemoveModule mpm_event_module
+  RemoveModule mpm_worker_module
+</IfModule>
